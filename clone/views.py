@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from .models import Post,Profile,Comment
 from .forms import PostForm,LocationForm,ProfileForm,CommentForm
-from decouple import config,Csv
+from decouple import config
 import datetime as dt
 from django.http import JsonResponse
 import json

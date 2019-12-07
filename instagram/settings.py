@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from decouple import config,Csv
+import django_heroku
+from decouple import config
 from django.conf import settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -146,3 +147,4 @@ STATICFILES_DIR=[
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+django_heroku.settings(locals())
