@@ -67,10 +67,10 @@ class Comment(models.Model):
     def save_comment(self):
         self.save()
 
-    # @classmethod
-    # def delete_comment(self):
-    #     self.delete()
-    #
+    @classmethod
+    def delete_comment(cls,self):
+        self.delete()
+    
 class Followers(models.Model):
     username= models.ForeignKey(User,on_delete=models.CASCADE)
     user = models.CharField(max_length=100)
